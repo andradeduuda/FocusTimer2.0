@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+  --text-color: hsl(240, 6%, 21%);
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: clamp(10.6rem, 4rem + 10vh, 8.8rem);
+  color: var(--text-color);
+
+  background-color: #5856563b;
+
+  min-height: 100vh;
+  display: grid;
+}
+
+.page{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin: 2rem;
+}
+
+.timer{
+    display: flex;
+    margin-bottom: -2rem;   
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+
+fieldset{
+  display: flex;
+  border: none;
+  margin-left: clamp(12rem, 1rem + 8vh, 19.4rem );
+}
+
+@media(min-width:700px){
+   .cards { 
+    display: grid;
+    gap:3.2rem;
+  }
+ .cards{
+  grid-template-areas: "A B" "C D" 
+   ;
+}
+
+.cards div:nth-child(1){
+grid-area: A;
+}
+
+.cards div:nth-child(2){
+grid-area: B;
+}
+
+.cards div:nth-child(3){
+grid-area: C;
+}
+
+.cards div:nth-child(4){
+grid-area: D;
+}
+}
